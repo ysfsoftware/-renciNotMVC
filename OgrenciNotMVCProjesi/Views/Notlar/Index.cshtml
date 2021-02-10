@@ -1,0 +1,39 @@
+﻿@using OgrenciNotMVCProjesi.Models.EntityFramework
+@model List<TblNotlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>NOT ID</th>
+        <th>ÖĞRENCİ</th>
+        <th>DERS</th>
+        <th>SINAV-I</th>
+        <th>SINAV-II</th>
+        <th>SINAV-III</th>
+        <th>PROJE</th>
+        <th>ORTALAMA</th>
+        <th>DURUM</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach(var ntlr in Model)
+        {
+        <tr>
+            <td>@ntlr.NotID</td>
+            <td>@ntlr.TblOgrenciler.OgrenciAd @ntlr.TblOgrenciler.OgrenciSoyad</td>
+            <td>@ntlr.DersID</td>
+            <td>@ntlr.Sinav1</td>
+            <td>@ntlr.Sinav2</td>
+            <td>@ntlr.Sinav3</td>
+            <td>@ntlr.Proje</td>
+            <td>@ntlr.Ortalama</td>
+            <td>@ntlr.Durum</td>
+            <td><a href="/Notlar/NotGetir/@ntlr.NotID" class="btn btn-warning">Güncelle</a></td>
+       </tr>
+        }
+    </tbody>
+</table>
+<a href="/Notlar/YenSinav" class="btn btn-success">Yeni Sınav Girişi</a>

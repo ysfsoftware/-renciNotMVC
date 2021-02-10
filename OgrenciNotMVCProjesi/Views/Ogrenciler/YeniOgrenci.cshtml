@@ -1,0 +1,67 @@
+﻿@model OgrenciNotMVCProjesi.Models.EntityFramework.TblOgrenciler
+
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div>
+        <form method="post" class="form-group">
+            <div>
+                <label>Öğrenci Adı</label>
+                <input type="text" class="form-control" name="OgrenciAd" />
+            </div>
+            <div style="margin-top:15px;">
+                <label>Öğrenci Soyadı</label>
+                <input type="text" class="form-control" name="OgrenciSoyad" />
+            </div>
+            <div style="margin-top:15px;">
+                <label>Öğrenci Fotoğraf</label>
+                <input type="text" class="form-control" name="OgrenciFotograf" />
+            </div>
+            <div style="margin-top:15px;">
+                <label>Cinsiyet</label>
+                <input type="text" class="form-control" name="OgrenciCinsiyet" />
+            </div>
+            <div style="margin-top:15px;">
+                <label>Öğrenci Kulüp</label>
+                @Html.DropDownListFor(m => m.TblKulupler.KulupID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+            </div>
+
+            @*<div style="margin-top:15px;">
+                <label>Şehir Seçimi</label>
+                @Html.DropDownList("Şehirler",
+               new[]
+               {
+                   new SelectListItem(){Value="1",Text="Ankara"},
+                   new SelectListItem(){Value="2",Text="İstanbul"},
+               }, "Şehir Seçiniz", new { @class = "form-control" }
+               )
+            </div>
+
+             <div style="margin-top:15px;">
+
+                    <label>Film Seçin</label>
+                    <select id="MovieType" name="MovieType">
+
+                        <option value="0">Aksiyon</option>
+
+                        <option value="1">Dram</option>
+
+                        <option value="2">Komedi</option>
+
+                        <option value="3">Bilim Kurgu</option>
+
+                        <option value="4">Animasyon</option>
+
+                    </select>
+
+
+
+
+            </div>>*@
+            <div style="margin-top:15px;">
+                <button class="btn btn-success">Öğrenci Ekle</button>
+            </div>
+
+        </form>
+    </div>

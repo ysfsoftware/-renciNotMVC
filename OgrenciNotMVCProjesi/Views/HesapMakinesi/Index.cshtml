@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hesap Makinesi</h2>
+
+<br />
+<form class="form-group" method="post">
+    <div>
+        Sayı : <input type="text" name="sayi1" id="sayi1" />
+        Sayı : <input type="text" name="sayi2" id="sayi2" />
+        <button class="btn btn-warning">Topla</button>
+        
+            Toplama Sonucu: @ViewBag.tpl
+       
+       
+    </div>
+    <br />
+    <div>
+        Sayı : <input type="text" name="sayi3" id="sayi3" />
+        Sayı : <input type="text" name="sayi4" id="sayi4" />
+        <button class="btn btn-warning">Çıkar</button>
+
+        Çıkarma Sonucu: @ViewBag.ckr
+    </div>
+    <br />
+    <div>
+        Sayı : <input type="text" name="sayi5" id="sayi5" />
+        Sayı : <input type="text" name="sayi6" id="sayi6" />
+        <button class="btn btn-warning">Çarp</button>
+
+        Çarpma Sonucu: @ViewBag.crp
+    </div>
+    <br />
+    <div>
+        Sayı : <input type="text" name="sayi7" id="sayi7" />
+        Sayı : <input type="text" name="sayi8" id="sayi8" />
+        <button class="btn btn-warning">Böl</button>
+
+        Bölme Sonucu: @ViewBag.bol
+    </div>
+    
+</form>
